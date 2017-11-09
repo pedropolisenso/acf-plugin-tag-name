@@ -16,9 +16,9 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 
 // check if class already exists
-if( !class_exists('acf_plugin_FIELD_NAME') ) :
+if( !class_exists('acf_plugin_TAG_NAME') ) :
 
-class acf_plugin_FIELD_NAME {
+class acf_plugin_TAG_NAME {
 	
 	/*
 	*  __construct
@@ -45,7 +45,7 @@ class acf_plugin_FIELD_NAME {
 		
 		// set text domain
 		// https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-		load_plugin_textdomain( 'acf-FIELD_NAME', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' ); 
+		load_plugin_textdomain( 'acf-TAG_NAME', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' ); 
 		
 		
 		// include field
@@ -75,7 +75,7 @@ class acf_plugin_FIELD_NAME {
 		
 		
 		// include
-		include_once('fields/acf-FIELD_NAME-v' . $version . '.php');
+		include_once('fields/acf-TAG_NAME-v' . $version . '.php');
 		
 	}
 	
@@ -83,7 +83,7 @@ class acf_plugin_FIELD_NAME {
 
 
 // initialize
-new acf_plugin_FIELD_NAME();
+new acf_plugin_TAG_NAME();
 
 
 // class_exists check
