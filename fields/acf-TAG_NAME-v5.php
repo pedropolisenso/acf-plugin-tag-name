@@ -149,7 +149,7 @@ class acf_field_FIELD_NAME extends acf_field {
 		*/
 		
 		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input data-role="tagsinput" type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
 		<?php
 	}
 	

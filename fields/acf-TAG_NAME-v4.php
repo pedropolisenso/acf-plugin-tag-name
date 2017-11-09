@@ -28,7 +28,7 @@ class acf_field_FIELD_NAME extends acf_field {
 	{
 		// vars
 		$this->name = 'FIELD_NAME';
-		$this->label = __('FIELD_LABEL');
+		$this->label = __('tag-name');
 		$this->category = __("Basic",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			// add default here to merge into your field. 
@@ -112,8 +112,9 @@ class acf_field_FIELD_NAME extends acf_field {
 	*  @date	23/01/13
 	*/
 	
-	function create_field( $field )
-	{
+	function create_field( $field ) {
+	 
+	 
 		// defaults?
 		/*
 		$field = array_merge($this->defaults, $field);
@@ -124,9 +125,7 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		// create Field HTML
 		?>
-		<div>
-			
-		</div>
+				<input data-role="tagsinput" type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
 		<?php
 	}
 	
@@ -154,13 +153,22 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		
 		// register & include JS
-		wp_register_script( 'acf-input-FIELD_NAME', "{$url}assets/js/input.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-input-FIELD_NAME');
+		wp_register_script( 'acf-jquery-TAG_NAME', "{$url}assets/js/jquery.min.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-jquery-TAG_NAME');
+		
+		wp_register_script( 'acf-bootstrap-TAG_NAME', "{$url}assets/js/bootstrap-tagsinput.min.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-bootstrap-TAG_NAME');
 		
 		
 		// register & include CSS
-		wp_register_style( 'acf-input-FIELD_NAME', "{$url}assets/css/input.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-input-FIELD_NAME');
+		wp_register_style( 'acf-taginput-TAG_NAME', "{$url}assets/css/bootstrap-tagsinput.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-taginput-TAG_NAME');
+
+		wp_register_style( 'acf-theme-TAG_NAME', "{$url}assets/css/bootstrap-theme.min.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-theme-TAG_NAME');
+
+		wp_register_style( 'acf-bootstrap-TAG_NAME', "{$url}assets/css/bootstrap.min.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-bootstrap-TAG_NAME');
 		
 	}
 	

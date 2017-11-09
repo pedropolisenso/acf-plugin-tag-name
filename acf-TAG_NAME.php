@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: Advanced Custom Fields: FIELD_LABEL
-Plugin URI: PLUGIN_URL
-Description: SHORT_DESCRIPTION
+Plugin Name: Custom Fields: TAG-NAME
+Plugin URI: https://github.com/pedropolisenso/acf-plugin-tag-name
+Description: Custom field for feature tag name
 Version: 1.0.0
-Author: AUTHOR_NAME
-Author URI: AUTHOR_URL
+Author: Pedro Polisenso
+Author URI: https://github.com/pedropolisenso
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
