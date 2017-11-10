@@ -28,7 +28,7 @@ class acf_field_FIELD_NAME extends acf_field {
 	{
 		// vars
 		$this->name = 'FIELD_NAME';
-		$this->label = __('tag-name');
+		$this->label = __('TAG_NAME');
 		$this->category = __("Basic",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			// add default here to merge into your field. 
@@ -122,10 +122,16 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		// perhaps use $field['preview_size'] to alter the markup?
 		
-		
+		$field_value = esc_attr($field['value']);
+
 		// create Field HTML
 		?>
-				<input data-role="tagsinput" type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="text" 
+			   data-type="tag-input"
+			   name="tag-input"
+			   data-name="<?php echo esc_attr($field['name']) ?>" 
+			   data-value="<?php echo $field_value ?>" 
+			   <?php if (array_key_exists('font_size',$field)) { ?> style="font-size:<?php echo $field['font_size'] ?>px;" <?php }  ?> />
 		<?php
 	}
 	
@@ -151,12 +157,22 @@ class acf_field_FIELD_NAME extends acf_field {
 		$url = $this->settings['url'];
 		$version = $this->settings['version'];
 		
-		
 		// register & include JS
 		wp_register_script( 'acf-jquery-TAG_NAME', "{$url}assets/js/jquery.min.js", array('acf-input'), $version );
 		wp_enqueue_script('acf-jquery-TAG_NAME');
 		
-		wp_register_script( 'acf-bootstrap-TAG_NAME', "{$url}assets/js/bootstrap-tagsinput.min.js", array('acf-input'), $version );
+		wp_register_script( 'acf-jquery-plugin-TAG_NAME', "{$url}assets/js/jquery.tag-input.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-jquery-plugin-TAG_NAME');
+
+		wp_register_script( 'acf-tag-name-TAG_NAME', "{$url}assets/js/tag-name.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-tag-name-TAG_NAME');
+
+		wp_register_style( 'acf-fontawesome-TAG_NAME', "{$url}assets/css/font-awesome.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-fontawesome-TAG_NAME');
+
+		wp_register_style( 'acf-taginput-TAG_NAME', "{$url}assets/css/tag-name.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-taginput-TAG_NAME');
+		/*wp_register_script( 'acf-bootstrap-TAG_NAME', "{$url}assets/js/bootstrap-tagsinput.min.js", array('acf-input'), $version );
 		wp_enqueue_script('acf-bootstrap-TAG_NAME');
 		
 		
@@ -168,7 +184,7 @@ class acf_field_FIELD_NAME extends acf_field {
 		wp_enqueue_style('acf-theme-TAG_NAME');
 
 		wp_register_style( 'acf-bootstrap-TAG_NAME', "{$url}assets/css/bootstrap.min.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-bootstrap-TAG_NAME');
+		wp_enqueue_style('acf-bootstrap-TAG_NAME');*/
 		
 	}
 	

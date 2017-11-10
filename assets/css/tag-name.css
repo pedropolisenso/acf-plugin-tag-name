@@ -1,0 +1,54 @@
+.app {
+  width: 600px;
+  height: auto;
+  outline: none;
+  font-size: 1em;
+}
+.app input {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+.app::before {
+  content: "";
+  display: table;
+}
+.app::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tag:first-child {
+  margin-left: 0;
+}
+.tag {
+  border-radius: 3px;
+  background: #9eacff;
+  float: left;
+  margin: 3px;
+  padding: 4px;
+  font-size: 1em;
+  vertical-align: middle;
+}
+.tag a {
+  color: #333333;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 5px;
+}
+.tag span {
+  padding-right: 10px;
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.note {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}

@@ -149,7 +149,7 @@ class acf_field_FIELD_NAME extends acf_field {
 		*/
 		
 		?>
-		<input data-role="tagsinput" type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="text" data-type="tag-input" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;"/>
 		<?php
 	}
 	
@@ -168,7 +168,7 @@ class acf_field_FIELD_NAME extends acf_field {
 	*  @return	n/a
 	*/
 
-	/*
+	
 	
 	function input_admin_enqueue_scripts() {
 		
@@ -178,17 +178,21 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		
 		// register & include JS
-		wp_register_script( 'acf-input-FIELD_NAME', "{$url}assets/js/input.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-input-FIELD_NAME');
+		wp_register_script( 'acf-jquery-TAG_NAME', "{$url}assets/js/jquery.min.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-jquery-TAG_NAME');
 		
-		
-		// register & include CSS
-		wp_register_style( 'acf-input-FIELD_NAME', "{$url}assets/css/input.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-input-FIELD_NAME');
+		wp_register_script( 'acf-jquery-plugin-TAG_NAME', "{$url}assets/js/jquery.tag-input.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-jquery-plugin-TAG_NAME');
+
+		wp_register_script( 'acf-tag-name-TAG_NAME', "{$url}assets/js/tag-name.js", array('acf-input'), $version );
+		wp_enqueue_script('acf-tag-name-TAG_NAME');
+
+		wp_register_style( 'acf-taginput-TAG_NAME', "{$url}assets/css/tag-name.css", array('acf-input'), $version );
+		wp_enqueue_style('acf-taginput-TAG_NAME');
 		
 	}
 	
-	*/
+	
 	
 	
 	/*
