@@ -1,6 +1,6 @@
 # ACF TAG-NAME Field
 
-TAG-NAME is a custom plugin for your projects using WordPress, is a specific field for select text.
+TAG-NAME is a custom field with a feature of tag name
 
 ### Compatibility
 
