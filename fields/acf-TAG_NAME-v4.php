@@ -158,33 +158,14 @@ class acf_field_FIELD_NAME extends acf_field {
 		$version = $this->settings['version'];
 		
 		// register & include JS
-		wp_register_script( 'acf-jquery-TAG_NAME', "{$url}assets/js/jquery.min.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-jquery-TAG_NAME');
-		
 		wp_register_script( 'acf-jquery-plugin-TAG_NAME', "{$url}assets/js/jquery.tag-input.js", array('acf-input'), $version );
 		wp_enqueue_script('acf-jquery-plugin-TAG_NAME');
 
 		wp_register_script( 'acf-tag-name-TAG_NAME', "{$url}assets/js/tag-name.js", array('acf-input'), $version );
 		wp_enqueue_script('acf-tag-name-TAG_NAME');
 
-		wp_register_style( 'acf-fontawesome-TAG_NAME', "{$url}assets/css/font-awesome.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-fontawesome-TAG_NAME');
-
 		wp_register_style( 'acf-taginput-TAG_NAME', "{$url}assets/css/tag-name.css", array('acf-input'), $version );
 		wp_enqueue_style('acf-taginput-TAG_NAME');
-		/*wp_register_script( 'acf-bootstrap-TAG_NAME', "{$url}assets/js/bootstrap-tagsinput.min.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-bootstrap-TAG_NAME');
-		
-		
-		// register & include CSS
-		wp_register_style( 'acf-taginput-TAG_NAME', "{$url}assets/css/bootstrap-tagsinput.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-taginput-TAG_NAME');
-
-		wp_register_style( 'acf-theme-TAG_NAME', "{$url}assets/css/bootstrap-theme.min.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-theme-TAG_NAME');
-
-		wp_register_style( 'acf-bootstrap-TAG_NAME', "{$url}assets/css/bootstrap.min.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-bootstrap-TAG_NAME');*/
 		
 	}
 	

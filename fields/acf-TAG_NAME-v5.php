@@ -178,9 +178,6 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		
 		// register & include JS
-		wp_register_script( 'acf-jquery-TAG_NAME', "{$url}assets/js/jquery.min.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-jquery-TAG_NAME');
-		
 		wp_register_script( 'acf-jquery-plugin-TAG_NAME', "{$url}assets/js/jquery.tag-input.js", array('acf-input'), $version );
 		wp_enqueue_script('acf-jquery-plugin-TAG_NAME');
 
@@ -191,9 +188,6 @@ class acf_field_FIELD_NAME extends acf_field {
 		wp_enqueue_style('acf-taginput-TAG_NAME');
 		
 	}
-	
-	
-	
 	
 	/*
 	*  input_admin_head()
